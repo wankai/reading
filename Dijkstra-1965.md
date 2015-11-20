@@ -19,10 +19,10 @@ N个线程的多线程程序，内有循环结构，循环体内都有个临界�
 while (true) {
   b[i] = false;
 
-  critical section
+  // critical section
   c[i] = true;
   b[i] = true;
-  remainder of the cycle in which blocking is allowed
+  // remainder of the cycle in which blocking is allowed
 }
 ```
 
