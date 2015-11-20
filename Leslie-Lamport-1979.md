@@ -8,7 +8,7 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 ## 单处理器系统
 给出下面一段程序，请你预测，程序执行完后，Y = ?
 ```c++
-// X = 0 initially
+// X的初始值为0, 每行右侧有一个lable标识此行
 X = 1           --- a
 Y = X + 1       --- b
 ```
