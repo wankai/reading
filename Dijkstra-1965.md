@@ -1,3 +1,4 @@
+[Dijkstra-1965](http://www.di.ens.fr/~pouzet/cours/systeme/bib/dijkstra.pdf)
 
 Solution of a Problem in Concurrent Programming Control
 ----
