@@ -16,27 +16,27 @@ N个线程的多线程程序，内有循环结构，循环体内都有个临界�
 ## 方案
 
 ```c++
-while (true) {
-  b[i] = false;
-  if (k != i) {
-    c[i] = true;
-    if (b[k]) k = i;
-    continue;
-  } else {
-    c[i] = false;
-    for (j = 1; j <= N; j++) {
-      if (j != i && !c[j]) continue;
-    }
-  }
+      while (true) {
+Li0:    b[i] = false;
+Li1:    if (k != i) {
+Li2:      c[i] = true;
+Li3:      if (b[k]) k = i;
+          continue;
+        } else {
+Li4:      c[i] = false;
+          for (j = 1; j <= N; j++) {
+            if (j != i && !c[j]) continue;
+          }
+        }
   
-  // critical section here
+        // critical section here
   
-  c[i] = true;
-  b[i] = true;
+        c[i] = true;
+        b[i] = true;
   
-  // remainder of the cycle in which blocking is allowed
+        // remainder of the cycle in which blocking is allowed
   
-}
+      }
 ```
 
 ## 证明
