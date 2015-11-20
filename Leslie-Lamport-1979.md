@@ -2,3 +2,5 @@
 
 How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 ----
+
+Lamport在此提出了构建顺序一致性多处理器系统的约束。
