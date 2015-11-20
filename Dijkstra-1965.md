@@ -25,7 +25,7 @@ while (true) {
   } else {
     c[i] = false;
     for (j = 1; j <= N; j++) {
-      if (j != 2 && !c[j]) continue;
+      if (j != i && !c[j]) continue;
     }
   }
   
