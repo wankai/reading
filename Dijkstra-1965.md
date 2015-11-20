@@ -19,9 +19,9 @@ N个线程的多线程程序，内有循环结构，循环体内都有个临界�
 while (true) {
   b[i] = false;
   if (k != i) {
-    if (b[k]) {
-      k = i;
-    }
+    c[i] = true;
+    if (b[k]) k = i;
+    continue;
   } else {
     c[i] = false;
     for (j = 1; j <= N; j++) {
