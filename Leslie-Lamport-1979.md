@@ -9,8 +9,8 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 给出下面一段程序，请你预测，程序执行完后，Y = ?
 ```c++
 // X = 0 initially
-X = 1
-Y = X + 1
+X = 1           --- a
+Y = X + 1       --- b
 ```
 人类总是倾向按照程序的纸面顺序(Program Order)来推理程序执行的结果。
 
