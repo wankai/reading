@@ -3,7 +3,7 @@
 How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 ----
 
-*Lamport在此提出了构建顺序一致性(Sequential Consistent)多处理器系统的约束。*
+**Lamport在此提出了构建顺序一致性(Sequential Consistent)多处理器系统的约束。**
 
 ## 单处理器系统
 给出下面一段程序，请你预测，程序执行完后，Y = ?
