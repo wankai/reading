@@ -12,6 +12,9 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 X = 1           --- a
 Y = X + 1       --- b
 ```
+任何一个脑子没抽的人都会说Y = 2
+为什么我们如此确定Y = 2 ？
+
 人类总是倾向按照程序的纸面顺序(Program Order)来推理程序执行的结果。
 
 计算机系统的设计者应该尽力满足这种要求，否则程序员会觉得你的系统很难用。但是，为了达到
