@@ -18,11 +18,24 @@ N个线程的多线程程序，内有循环结构，循环体内都有个临界�
 ```c++
 while (true) {
   b[i] = false;
-
-  // critical section
+  if (k != i) {
+    if (b[k]) {
+      k = i;
+    }
+  } else {
+    c[i] = false;
+    for (j = 1; j <= N; j++) {
+      if (j != 2 && !c[j]) continue;
+    }
+  }
+  
+  // critical section here
+  
   c[i] = true;
   b[i] = true;
+  
   // remainder of the cycle in which blocking is allowed
+  
 }
 ```
 
