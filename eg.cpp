@@ -17,6 +17,7 @@ class Singleton
  private:
   Singleton();
   void Singleton(const Singleton&);
+  void operator=(const Singleton&);
   
   static Singleton* ptr_;
 };
