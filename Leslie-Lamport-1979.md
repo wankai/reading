@@ -54,7 +54,11 @@ uniprocessor几乎总被设计成sequential的
 
 > 我可以认为，一个有N个线程的多线程程序，每个线程的指令都是顺序执行的，即使多处理器在底层是乱序执行。
 
-请看下面的多线程程序，执行完后，X和Y值是什么
+我们把这叫做sequential consistent，这是程序员合理的期望。
+
+现在又有一家公司聘请你为他设计一款多处理系统，你会怎么做呢？把若干个sequential uniprocess搭在一起不就行了吗？很可惜，事情并没有这么简单。下面证明，把多个sequential uniprocessor放在一起并不能提供sequential consistent的保证。
+
+请看下面的多线程程序，执行完后，寄存器r1和r2值是什么
 
 ```c++
 // X, Y的初始值为0，两个线程P1、P2
@@ -63,3 +67,5 @@ uniprocessor几乎总被设计成sequential的
 1.    X = 1           Y = 1
 2.   r1 = Y          r2 = X
 ```
+
+r1和r2至少有一个为1。是的，只要多处理器承诺sequential consistent，就一定是这个结果。
