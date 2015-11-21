@@ -20,8 +20,12 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 让一个没学过编程的人来回答，他会毫不犹豫的说Y等于2，因为这是最自然的思考方式。
 如果你问他如果第2句先执行呢，Y就等于1了哦！他会觉得你脑子有病。
 
-一个对程序员友好的单处理器应该保证程序员能以最自然的方式，也就是顺序执行(sequential)的方式来推断程序执行的结果。我们称这样的单处理器为sequential uniprocessor
+一个对程序员友好的单处理器应该保证程序员能以最自然的方式，也就是顺序执行(sequential)的方式，来推断程序执行的结果。我们称这样的单处理器为sequential uniprocessor
 
 ### sequential uniprocessor的优化
 
 现在有一家公司聘请你为他们设计一款sequential uniprocessor，你会怎么做？
+
+很简单，每条指令都顺序执行不就行了吗！这样确实能保证sequential性质，但是性能会很低，因为全都是串行的。于是不久你就被公司开除了。
+
+现代CPU内部结构非常复杂，
