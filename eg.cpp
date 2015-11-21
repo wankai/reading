@@ -20,5 +20,7 @@ class Singleton
   
   static Singleton* ptr_;
 };
+// should initialize to NULL before main
+Singleton* Singleton::ptr_ = NULL;
 // usage
 // Singleton::instance()->foo();
