@@ -6,6 +6,9 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 **点评：Lamport在此提出了构建顺序一致性(Sequential Consistent)多处理器系统的约束。**
 
 ## 单处理器系统
+
+### sequential uniprocessor
+
 给出下面一段程序，请你预测，程序执行完后，Y的值是什么
 ```c++
     // X的初始值为0
@@ -15,8 +18,8 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 让一个没学过编程的人来回答，他会毫不犹豫的说Y等于2，因为这是最自然的思考方式。
 如果你问他如果第2句先执行呢，Y就等于1了哦！他会觉得你脑子有病。
 
-一个对程序员友好的CPU应该保证程序员能以最自然的方式，也就是顺序执行(sequential)的方式来推断程序执行的结果，
+一个对程序员友好的单处理器应该保证程序员能以最自然的方式，也就是顺序执行(sequential)的方式来推断程序执行的结果。我们称这样的单处理器为sequential uniprocessor
 
-人类总是倾向按照程序的纸面顺序(Program Order)来推理程序执行的结果。
+### sequential uniprocessor的优化
 
 计算机系统的设计者应该尽力满足这种要求，否则程序员会觉得你的系统很难用。但是，为了达到
