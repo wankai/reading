@@ -69,3 +69,11 @@ uniprocessor几乎总被设计成sequential的
 ```
 
 r1和r2至少有一个为1。是的，只要多处理器承诺sequential consistent，就一定是这个结果。
+
+但是我们从另一个角度看，sequential uniprocessor可以对不存在依赖的两条指令做任意乱序，P1和P2的两条指令多不存在依赖，所以他们的执行顺序可以如下
+
+```
+         P1            P2
+      r1 = Y         r2 = X
+       X = 1          Y = 1
+```
