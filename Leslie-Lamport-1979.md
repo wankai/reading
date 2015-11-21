@@ -7,6 +7,8 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 ## 单处理器系统
 
+为了论文的内容，我们先看单处理器系统的设计
+
 ### sequential uniprocessor
 
 给出下面一段程序，请你预测，程序执行完后，Y的值是什么
