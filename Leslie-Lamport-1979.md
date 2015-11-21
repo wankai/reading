@@ -13,9 +13,9 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 2.  Y = X + 1
 ```
 让一个没学过编程的人来回答，他会毫不犹豫的说Y等于2，因为这是最自然的思考方式。
-如果你问他如果第2句先执行呢？他会觉得你脑子有病。
+如果你问他如果第2句先执行呢，Y就等于1了哦！他会觉得你脑子有病。
 
-为了保证CPU的可编程性，CPU设计者应该保证程序员可以
+一个对程序员友好的CPU应该保证程序员能以最自然的方式，也就是顺序执行(sequential)的方式来推断程序执行的结果，
 
 人类总是倾向按照程序的纸面顺序(Program Order)来推理程序执行的结果。
 
