@@ -1,9 +1,10 @@
-// pre C++11 implementation
 class Singleton
 {
  public:
   static Singleton* instance()
   {
+    MutexGuard mg(mutex_);
+    
     if (ptr_ == NULL)
     {
       ptr_ = new Singleton
@@ -11,17 +12,10 @@ class Singleton
     return ptr_;
   }
   
-  // practicle operations
-  void foo();
-  
  private:
-  Singleton();
-  void Singleton(const Singleton&);
-  void operator=(const Singleton&);
+  // disable constructing and copy
   
+  static Mutex mutex_;
   static Singleton* ptr_;
 };
-// should initialize to NULL before main
-Singleton* Singleton::ptr_ = NULL;
-// usage
-// Singleton::instance()->foo();
+// initialize static member object
