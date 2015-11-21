@@ -2,8 +2,10 @@
 class Singleton
 {
  public:
-  static Singleton* instance() {
-    if (ptr_ == NULL) {
+  static Singleton* instance()
+  {
+    if (ptr_ == NULL)
+    {
       ptr_ = new Singleton
     }
     return ptr_;
