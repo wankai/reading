@@ -37,6 +37,8 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 2.  Y = 2
 3.  Z = X + 1
 ```
+第3句必须等第1句执行完，但是第2句无论何时执行都对结果没影响。
 
+一个完整的程序可以看成一个偏序网络，CPU执行指令时只要两个指令不存在依赖关系，可以随意决定执行顺序。
 
 
