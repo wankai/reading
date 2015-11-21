@@ -1,3 +1,5 @@
+// usage:
+// Singleton::instance()->foo();
 class Singleton
 {
  public:
@@ -7,6 +9,10 @@ class Singleton
     }
     return ptr_;
   }
+  
+  // practicle operations
+  void foo();
+  
  private:
   Singleton();
   void Singleton(const Singleton&);
