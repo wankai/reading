@@ -1,5 +1,4 @@
-// usage:
-// Singleton::instance()->foo();
+// pre C++11 implementation
 class Singleton
 {
  public:
@@ -19,3 +18,5 @@ class Singleton
   
   static Singleton* ptr_;
 };
+// usage
+// Singleton::instance()->foo();
