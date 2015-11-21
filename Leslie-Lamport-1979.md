@@ -7,7 +7,7 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 ## 单处理器系统
 
-为了论文的内容，我们先看单处理器系统的设计
+为了理解论文的内容，我们先看单处理器系统的设计
 
 ### sequential uniprocessor
 
@@ -24,4 +24,4 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 ### sequential uniprocessor的优化
 
-计算机系统的设计者应该尽力满足这种要求，否则程序员会觉得你的系统很难用。但是，为了达到
+现在有一家公司聘请你为他们设计一款sequential uniprocessor，你会怎么做？
