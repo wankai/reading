@@ -28,7 +28,7 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 很简单，每条指令都顺序执行不就行了吗！这样确实能保证sequential性质，但是性能会很低，因为全都是串行的。于是不久你就被公司开除了。
 
-现代CPU内部结构非常复杂，指令执行的顺序不一定和程序表示的一致。为了保证sequential，CPU设计师对程序员承诺，虽然指令在底层是乱序执行的，不过你们能根据纸面程序的顺序来推断执行结果。
+现代处理器内部结构非常复杂，指令执行的顺序不一定和程序表示的一致。为了保证sequential，处理器设计师对程序员承诺，虽然指令在底层是乱序执行的，不过你们能根据纸面程序的顺序来推断执行结果。
 
 为什么乱序执行，还能保证结果正确呢？因为程序中的数据依赖关系是偏序的。
 
@@ -39,6 +39,11 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 ```
 第3句必须等第1句执行完，但是第2句无论何时执行都对结果没影响。
 
-一个完整的程序可以看成一个偏序网络，CPU执行指令时只要两个指令不存在依赖关系，可以随意决定执行顺序。
+一个完整的程序可以看成一个偏序网络，处理器执行指令时只要两个指令不存在依赖关系，可以随意决定执行顺序。
 
+### uniprocessor总结
+
+uniprocessor几乎总被设计成sequential的
+
+只要保证sequential性质，单处理器无论做什么优化都是被允许。
 
