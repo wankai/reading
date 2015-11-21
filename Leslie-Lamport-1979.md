@@ -28,4 +28,6 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 很简单，每条指令都顺序执行不就行了吗！这样确实能保证sequential性质，但是性能会很低，因为全都是串行的。于是不久你就被公司开除了。
 
-现代CPU内部结构非常复杂，
+现代CPU内部结构非常复杂，指令执行的顺序不一定和程序表示的一致。为了保证sequential，CPU设计师对程序员承诺，虽然指令在底层是乱序执行的，不过你们能根据纸面程序的顺序来推断执行结果。
+
+
