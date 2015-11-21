@@ -30,4 +30,13 @@ How to Make Multiprocessor Computer That Correctly Executes Multiprocess Program
 
 现代CPU内部结构非常复杂，指令执行的顺序不一定和程序表示的一致。为了保证sequential，CPU设计师对程序员承诺，虽然指令在底层是乱序执行的，不过你们能根据纸面程序的顺序来推断执行结果。
 
+为什么乱序执行，还能保证结果正确呢？因为程序中的数据依赖关系是偏序的。
+
+```c++
+1.  X = 1
+2.  Y = 2
+3.  Z = X + 1
+```
+
+
 
