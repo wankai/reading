@@ -3,11 +3,13 @@ class Singleton
  public:
   static Singleton* instance()
   {
-    MutexGuard mg(mutex_);
-    
     if (ptr_ == NULL)
     {
-      ptr_ = new Singleton
+      MutexGuard mg(mutex_);
+      if (ptr_ == NULL)
+      {
+        ptr_ = new Singleton;
+      }
     }
     return ptr_;
   }
