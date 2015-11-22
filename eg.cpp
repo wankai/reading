@@ -3,27 +3,23 @@ class Singleton
  public:
   static Singleton* instance()
   {
-    if (ptr_ == NULL)
+    if (!inited_)
     {
       MutexGuard mg(mutex_);
-      if (ptr_ == NULL)
+      if (!inited_)
       {
-        // C++ has 3 new:
-        // new operator
-        // operator new
-        // placement new
-        ptr_ =                           // step3
-        operator new(sizeof(Singleton)); // step1
-        new (ptr_) Sinleton;             // step2
+        new (&obj) Singleton;
+        inited_ = true;
       }
     }
-    return ptr_;
+    return &obj_;
   }
   
  private:
   // disable constructing and copy
   
   static Mutex mutex_;
-  static Singleton* ptr_;
+  static Singleton obj_;
+  static bool inited_;
 };
 // initialize static member object
