@@ -1,7 +1,7 @@
 class Singleton
 {
  public:
-  static Singleton* instance()
+  static ShardPtr<Singleton> instance()
   {
     if (local_ptr_ == NULL) {
       {
@@ -12,7 +12,7 @@ class Singleton
       }
       local_ptr_ = ptr_;
     }
-    return local_ptr_.get();
+    return local_ptr_;
   }
   
  private:
