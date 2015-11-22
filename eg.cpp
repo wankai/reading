@@ -3,24 +3,13 @@ class Singleton
  public:
   static Singleton* instance()
   {
-    if (!inited_)
-    {
-      MutexGuard mg(mutex_);
-      if (!inited_)
-      {
-        new (&obj) Singleton;
-        inited_ = true;
-      }
-    }
     return &obj_;
   }
   
  private:
-  // disable constructing and copy
-  
-  static Mutex mutex_;
+   Singleton();
+  // disable copy
   static Singleton obj_;
-  static bool inited_;
 };
-bool Singleton::inited_ = false;
+Singleton Singleton::obj_;
 // initialize other static member object
