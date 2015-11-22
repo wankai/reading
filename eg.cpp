@@ -3,7 +3,7 @@ class Singleton
  public:
   static Singleton* instance()
   {
-    if (!local_ptr_) {
+    if (local_ptr_ == NULL) {
       {
         MutexGuard mg(mutex_);
         if (ptr_ == NULL) {
@@ -19,5 +19,5 @@ class Singleton
   Singleton();
   thread_local SharedPtr<Singleton> local_ptr_;
   static Mutex mutex_;
-  static Singleton* ptr_;
+  static SharedPtr<Singleton> ptr_;
 };
