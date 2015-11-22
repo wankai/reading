@@ -23,4 +23,4 @@ class Singleton
   static bool inited_;
 };
 bool Singleton::inited_ = false;
-// initialize static member object
+// initialize other static member object
