@@ -8,7 +8,13 @@ class Singleton
       MutexGuard mg(mutex_);
       if (ptr_ == NULL)
       {
-        ptr_ = new Singleton;
+        // C++ has 3 new:
+        // new operator
+        // operator new
+        // placement new
+        ptr_ =                           // step3
+        operator new(sizeof(Singleton)); // step1
+        new (ptr_) Sinleton;             // step2
       }
     }
     return ptr_;
