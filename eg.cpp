@@ -7,7 +7,7 @@ class Singleton
   }
   
  private:
-   Singleton();
+  Singleton();
   // disable copy
   static Singleton obj_;
 };
