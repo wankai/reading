@@ -3,13 +3,11 @@ class Singleton
  public:
   static Singleton* instance()
   {
-    return &obj_;
+    static Singleton obj;
+    return &obj;
   }
   
  private:
   Singleton();
-  // disable copy
-  static Singleton obj_;
 };
-Singleton Singleton::obj_;
-// initialize other static member object
+
