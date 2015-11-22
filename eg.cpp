@@ -1,23 +1,24 @@
 class Singleton
 {
  public:
-  static ShardPtr<Singleton> instance()
+  static Singleton* instance()
   {
-    if (local_ptr_ == NULL) {
+    Singleton* tmp = interpret_cast<Singleton*>(ptr_.load(std::memory_order_acquire));
+    if (tmp == NULL) {
       {
         MutexGuard mg(mutex_);
         if (ptr_ == NULL) {
-          ptr_ = new Singleton;
+          Singleton* t = new Singleton;
+          ptr_.store(t, std::memory_order_release);
         }
       }
       local_ptr_ = ptr_;
     }
-    return local_ptr_;
+    return tmp;
   }
   
  private:
   Singleton();
-  thread_local SharedPtr<Singleton> local_ptr_;
   static Mutex mutex_;
-  static SharedPtr<Singleton> ptr_;
+  static std::atomic<uintptr_t> ptr_;
 };
