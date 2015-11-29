@@ -32,6 +32,7 @@ class A
 
 #### Trivial Default Construtible
 
+如果构造函数不需要做任何事就能确保对象的正确性，那么编译器就不会合成这个缺省构造函数
 
 #### Non-trivial Default Constructible
 
