@@ -4,7 +4,7 @@
 
 类是构造对象的蓝图，每一个类都需要构造函数，因为一个不能构造对象的类是没有意义的。
 
-### Trivial Constructor
+### Trivial Default Constructor
 
 ```c++
 class A
