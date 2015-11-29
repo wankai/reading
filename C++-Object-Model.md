@@ -19,9 +19,9 @@ class A
 
 > 思考：为什么用户定义的空缺省构造函数被认为是non-trivial的
 
-### 已经被人工定义构造函数
+### 用户定义的构造函数
 
-编译器会在构造函数中插入代码以保证：
+编译器可能会在构造函数中插入代码以保证：
 
 1. 组合得来的子对象被正确构造
 2. 继承得来的子对象被正确构造
@@ -30,9 +30,16 @@ class A
 
 ### 无构造函数
 
+#### Trivial Default Construtible
+
+
+#### Non-trivial Default Constructible
+
 1. 如果该类的构造函数可以是trivial的，那么缺省构造函数可以什么都不做，所以编译器并不会生成一个缺省构造函数。
 2. 如果该类的构造函数必须是non-trivial的，那么编译器必须做些事儿，保证对象被正确地构造。
 
-trivial在这里可以理解为，不对内存做任何初始化就能保证构造的正确性。一个类被称为trivial-constructable必须满足以下条件
+trivial在这里可以理解为，不对内存做任何初始化就能保证构造的正确性。一个类被称为"Trivial Default Constructible"必须满足以下条件
+
+
 
 
