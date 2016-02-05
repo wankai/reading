@@ -131,8 +131,6 @@ Function SUM(A: Array[Int], i: Int, N: Int): Int {
 ```python
 Type OP_TYPE = (ADD, SUB, MULT, QUOT)
 
-
-
 Function Sum(X: Int, Y: Int): Int = X + Y
 Function Diff(X: Int, Y: Int): Int = X - Y
 Function Times(X: Int, Y: Int): Int = X * Y
@@ -140,11 +138,14 @@ Function Divide(X: Int, Y: Int): Int = X / Y
 
 Function Arith(op: OP_TYPE): Function = {
     CASE op OF
-    ADD  => Arith := Sum
-    SUB  => Arith := Diff
-    MULT => Arith := Times
-    QUOT => Arith := Divide
+    ADD  => Sum
+    SUB  => Diff
+    MULT => Times
+    QUOT => Divide
 }
 
-
+Arith(ADD)  求值得 Sum
+Arith(SUB)  求值得 Diff
+Arith(MULT) 求值得 Times
+Arith(QUOT) 求值得 Divide
 ```
