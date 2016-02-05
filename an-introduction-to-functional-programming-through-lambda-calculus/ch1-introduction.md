@@ -149,5 +149,5 @@ Arith(SUB)  求值得 Diff
 Arith(MULT) 求值得 Times
 Arith(QUOT) 求值得 Divide
 
-Arith(ADD)(3, 4) 即 3 + 4
+Arith(ADD)(3, 4) 求值得 3 + 4，即7
 ```
