@@ -128,6 +128,8 @@ Function SUM(A: Array[Int], i: Int, N: Int): Int {
 
 ## 1.7 函数即值
 
+很多命令式语言支持函数作为参数传入，但是很少支持函数作为返回值。在函数式语言中，函数和普通的值一样，既可以作为函数参数，也可以作为函数返回值。举例如下：
+
 ```python
 Type OP_TYPE = (ADD, SUB, MULT, QUOT)
 
