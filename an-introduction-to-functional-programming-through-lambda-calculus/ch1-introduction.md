@@ -33,4 +33,4 @@ print distance
 > \<command1>; \<command2>; \<command3>; ......
 
 通常，每一条命令都有赋值操作，对右边表达式的求值，然后赋值给左边的变量。
-> <name> := <expression>
+> \<name> := \<expression>
