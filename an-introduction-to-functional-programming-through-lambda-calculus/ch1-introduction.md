@@ -116,7 +116,7 @@ Function SUM(A: Array[Int], i: Int, N: Int): Int {
 ```
 每一次递归调用都重新引入了A, i, N这三个本地符号，屏蔽之前的符号；函数求值完毕后，刚刚新引入的符号就消失了，上一个函数的本地符号又能访问了。
 
-# 1.6 函数式语言的数据结构
+## 1.6 函数式语言的数据结构
 
 在命令式语言中，数组元素和结构体成员都能用赋值语句更新。但是函数式语言没有赋值的概念，数据结构的子结构是无法独立更新的，所以为了更新子结构，必须重新创建一个完整的数据结构。这就要求函数式语言的数据结构必须是完全__显式__的。
 
@@ -126,4 +126,25 @@ Function SUM(A: Array[Int], i: Int, N: Int): Int {
 
 函数式语言还有一个不同的地方，它没有全局变量。在命令式语言中，全局变量很常见，多个子过程不通过参数传递就能修改它们，即隐式传递。然后，函数式语言没有赋值操作，变量显示传递。所以函数式语言的函数参数一般比命令式语言的多，这样也有一个好处，数据流是显示的，容易跟踪。
 
-# 1.7 函数即值
+## 1.7 函数即值
+
+```python
+Type OP_TYPE = (ADD, SUB, MULT, QUOT)
+
+
+
+Function Sum(X: Int, Y: Int): Int = X + Y
+Function Diff(X: Int, Y: Int): Int = X - Y
+Function Times(X: Int, Y: Int): Int = X * Y
+Function Divide(X: Int, Y: Int): Int = X / Y
+
+Function Arith(op: OP_TYPE): Function = {
+    CASE op OF
+    ADD  => Arith := Sum
+    SUB  => Arith := Diff
+    MULT => Arith := Times
+    QUOT => Arith := Divide
+}
+
+
+```
