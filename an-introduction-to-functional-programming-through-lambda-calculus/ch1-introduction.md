@@ -64,19 +64,13 @@ T := X; Y := T; X := Y   结果是Y赋值为X
 
 但是在函数式语言中，函数求值并不会改变名值绑定，平级函数的求值顺序不会影响结果，因为平级函数之间八竿子打不着关系。例如:
 ```python
-Function F(X, Y, Z: Int): Int {
-... ...
-}
+Function F(X, Y, Z: Int): Int
 
-Function A(P: Int): Int {
-... ...
-}
+Function A(P: Int): Int
 
-Function B(Q: Int): Int {
-... ...
-}
+Function B(Q: Int): Int
 
-Function C(R: Int): Int {
-... ...
-}
+Function C(R: Int): Int
+
+F(A(D), B(D), C(D))
 ```
