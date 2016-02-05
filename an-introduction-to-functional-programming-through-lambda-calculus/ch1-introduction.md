@@ -86,6 +86,5 @@ Sum1 := A[1]
 Sum2 := Sum1 + A[2]
 Sum3 := Sum2 + A[3]
 ... ...
-Sumn := Sumn-1 + A[n]
 ```
 
