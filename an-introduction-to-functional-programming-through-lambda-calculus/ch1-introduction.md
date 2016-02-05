@@ -102,9 +102,9 @@ while (i < N) {
 ```python
 Function SUM(A: Array[Int], i: Int, N: Int): Int {
     if (i > N)
-        0
+        Sum := 0
     else
-        A[i] + SUM(A, i+1, N)
+        Sum := A[i] + SUM(A, i+1, N)
 }
 
 SUM(A, 0, N)
