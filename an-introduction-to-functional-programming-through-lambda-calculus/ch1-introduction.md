@@ -41,4 +41,5 @@ print distance
 
 
 函数式语言的根基是函数调用，一个函数式语言编写的程序就是一个不断嵌套调用的函数：
+
 \<function1>(\<function2> (\<function3> ...) ...))
