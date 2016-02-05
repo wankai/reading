@@ -99,3 +99,13 @@ while (i < N) {
 }
 ```
 在函数式语言中，因为名只能绑定一次，所以我们要引入N个名才能完成任务。另外函数式语言是不存在命令串的，这种循环的任务只能用递归函数。
+```python
+Function SUM(A: Array[Int], i: Int, N: Int): Int {
+    if (i > N)
+        0
+    else
+        A[i] + SUM(A, i+1, N)
+}
+
+SUM(A, 0, N)
+```
